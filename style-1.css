@@ -1,0 +1,156 @@
+:root{
+    --bg:#fff0f5;
+    --text:#4a2c3a;
+    --card:#ffffff;
+    --primary:#ff69b4;
+    --secondary:#d8b4fe;
+    --shadow:0 4px 12px rgba(255,105,180,0.2);
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --bg:#2d1b2e;
+        --text:#ffe4f2;
+        --card:#3a253c;
+        --primary:#ff85c1;
+        --secondary:#c084fc;
+        --shadow:0 4px 12px rgba(255,133,193,0.3);
+    }
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    background:linear-gradient(135deg,#ff69b4,#d8b4fe);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:2.8rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
+}
+
+/* Navigation */
+nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    padding:10px 18px;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:rgba(255,255,255,0.25);
+}
+
+/* Grid Layout */
+.grid-container{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:25px;
+}
+
+/* Cards */
+.card{
+    background:var(--card);
+    padding:25px;
+    border-radius:20px;
+    border:2px solid #ffd6e8;
+    box-shadow:var(--shadow);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+h2{
+    color:var(--primary);
+    margin-bottom:12px;
+}
+
+h3{
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+a{
+    color:var(--primary);
+}
+
+/* Contact Links */
+.card a{
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.card a:hover{
+    text-decoration:underline;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:linear-gradient(135deg,#ff69b4,#d8b4fe);
+    color:white;
+    margin-top:20px;
+}
+
+/* Tablet */
+@media (min-width:768px){
+    .grid-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width:1024px){
+    .grid-container{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    header h1{
+        font-size:3.5rem;
+    }
+}
